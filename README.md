@@ -28,10 +28,10 @@ OPTIONS:
             interval to check target updates
 
         --requests-per-conn <REQUESTS_PER_CONN>
-            hint to send N requests per single connection
+            hint to send N requests per single connection [default: 10]
 
-    -t, --targets-path <TARGETS_PATH> [default: itarmy targets]
-            path or url to get configuration from
+    -t, --targets-path <TARGETS_PATH>
+            path or url to get configuration from [default: itarmy_ua]
 
         --traffic-limit <TRAFFIC_LIMIT>
             Not implemented yet, sets limit on write operations in bytes per second
