@@ -1,3 +1,4 @@
+```
 distress 0.1.0
 pen-testing tool
 
@@ -40,3 +41,4 @@ OPTIONS:
 
     -V, --version
             Print version information
+```
