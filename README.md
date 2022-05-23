@@ -28,7 +28,7 @@ OPTIONS:
             interval to check target updates
 
         --requests-per-conn <REQUESTS_PER_CONN>
-            hint to send N requests per single connection [default: 10]
+            hint to send N requests per single connection [default: 1024]
 
     -t, --targets-path <TARGETS_PATH>
             path or url to get configuration from [default: itarmy_ua]
