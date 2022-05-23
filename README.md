@@ -13,7 +13,7 @@ OPTIONS:
 
 
     -e, --executor-count <EXECUTOR_COUNT>
-            number of task spawners [default: num_cpu * 1024]
+            number of task spawners [default: 1024]
 
     -h, --help
             Print help information
