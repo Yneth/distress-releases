@@ -1,5 +1,5 @@
 ```
-distress 0.1.1
+distress 0.1.2
 pen-testing tool
 
 USAGE:
@@ -13,7 +13,7 @@ OPTIONS:
             socket connect timeout for targets and proxies
 
         --disable-auto-update
-
+            
 
     -h, --help
             Print help information
