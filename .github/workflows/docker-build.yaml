@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
+        description: 'version of the docker asset'
         required: true
         type: environment
   
