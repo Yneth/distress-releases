@@ -1,10 +1,12 @@
 name: ci
 
 on:
-  push:
-    tags:
-      - '*'
-
+  workflow_dispatch:
+    inputs:
+      version:
+        required: true
+        type: environment
+  
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -32,7 +34,7 @@ jobs:
           platforms: linux/386,linux/amd64,linux/arm64
           push: true
           build-args: |
-            "VERSION=${{ github.ref }}"
+            "VERSION=${{ inputs.VERSION }}"
           tags: |
             ghcr.io/${{ env.OWNER_LC }}/distress:latest
             ghcr.io/${{ env.OWNER_LC }}/distress:${{ github.ref_name }}

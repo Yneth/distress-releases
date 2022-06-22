@@ -1,5 +1,3 @@
-ARG version=0.1.6
-
 FROM alpine:latest
 ARG version
 ARG TARGETPLATFORM
