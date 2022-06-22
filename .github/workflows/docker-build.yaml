@@ -38,4 +38,4 @@ jobs:
             "VERSION=${{ inputs.VERSION }}"
           tags: |
             ghcr.io/${{ env.OWNER_LC }}/distress:latest
-            ghcr.io/${{ env.OWNER_LC }}/distress:${{ github.ref_name }}
+            ghcr.io/${{ env.OWNER_LC }}/distress:${{ inputs.VERSION }}
