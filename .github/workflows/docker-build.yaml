@@ -1,8 +1,9 @@
 name: ci
 
 on:
-  release:
-    types: [released]
+  push:
+    tags:
+      - '*'
 
 jobs:
   docker:
@@ -23,4 +24,8 @@ jobs:
         with:
           platforms: linux/386,linux/amd64,linux/arm64
           push: true
-          tags: ghcr.io/${{ github.actor }}/distress:latest
+          build-args: |
+            "VERSION=${{ github.ref }}"
+          tags: |
+            ghcr.io/${{ github.actor }}/distress:latest
+            ghcr.io/${{ github.actor }}/distress:${{ github.ref }}
