@@ -19,6 +19,13 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Add username
+        env:
+          OWNER: ${{ github.actor }}
+        run: |
+          echo "OWNER_LC=${OWNER,,}" >> $GITHUB_ENV
+      
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
@@ -27,5 +34,5 @@ jobs:
           build-args: |
             "VERSION=${{ github.ref }}"
           tags: |
-            ghcr.io/${{ github.actor }}/distress:latest
-            ghcr.io/${{ github.actor }}/distress:${{ github.ref_name }}
+            ghcr.io/${{ env.OWNER_LC }}/distress:latest
+            ghcr.io/${{ env.OWNER_LC }}/distress:${{ github.ref_name }}
