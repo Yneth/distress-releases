@@ -1,5 +1,6 @@
-FROM alpine:latest
 ARG version
+
+FROM alpine:latest
 ARG TARGETPLATFORM
 
 RUN \ 
