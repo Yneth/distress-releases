@@ -28,4 +28,4 @@ jobs:
             "VERSION=${{ github.ref }}"
           tags: |
             ghcr.io/${{ github.actor }}/distress:latest
-            ghcr.io/${{ github.actor }}/distress:${{ github.ref }}
+            ghcr.io/${{ github.actor }}/distress:${{ github.ref_name }}
