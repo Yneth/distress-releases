@@ -1,6 +1,5 @@
-ARG version
-
 FROM alpine:latest
+ARG version
 ARG TARGETPLATFORM
 
 RUN \ 

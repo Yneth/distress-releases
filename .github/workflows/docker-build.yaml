@@ -35,7 +35,7 @@ jobs:
           platforms: linux/386,linux/amd64,linux/arm64
           push: true
           build-args: |
-            "VERSION=${{ inputs.VERSION }}"
+            "version=${{ inputs.VERSION }}"
           tags: |
             ghcr.io/${{ env.OWNER_LC }}/distress:latest
             ghcr.io/${{ env.OWNER_LC }}/distress:${{ inputs.VERSION }}
