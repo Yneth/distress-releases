@@ -1,5 +1,5 @@
 ```
-distress 0.1.7
+distress 0.1.8
 pen-testing tool
 
 USAGE:
@@ -7,7 +7,7 @@ USAGE:
 
 OPTIONS:
     -c, --concurrency <CONCURRENCY>
-            number of task spawners [default: 1024]
+            number of task spawners [default: 2048]
 
     -t, --targets-path <TARGETS_PATH>
             path or url to get configuration from [default: itarmy_ua]
