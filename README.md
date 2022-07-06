@@ -1,5 +1,5 @@
 ```
-distress 0.2.0
+distress 0.2.1
 pen-testing tool
 
 USAGE:
