@@ -1,5 +1,5 @@
 ```
-distress 0.2.2
+distress 0.3.0
 pen-testing tool
 
 USAGE:
@@ -18,18 +18,23 @@ OPTIONS:
     -q, --quiet
             Less output per occurrence
 
-        --traffic-limit <TRAFFIC_LIMIT>
-            UNSTABLE: Sets limit on write operations in bytes per second
-
         --enable-metrics
             Enables metrics collection
 
         --use-my-ip <USE_MY_IP>
-            hint to use your ip in % of requests from 0 to 100 inclusive [default: 0]
+            hint to use your ip in % of requests from 0 to 100 inclusive works amazing with VPN
+            [default: 0]
 
         --use-tor <USE_TOR>
-            hint to use tor connections in % of max proxy connections(200), useful in cases when you
-            get out of memory [default: 25]
+            number of tor connections per target to use, max 100 be careful with this option, as it
+            may be cpu intensive leading to freeze. on my testing machine 6 gives great results
+            [default: 0]
+
+        --log-per-target
+            Enables togging info for targets
+
+        --log-interval-sec <LOG_INTERVAL_SEC>
+            manages log frequency
 
         --read-timeout <READ_TIMEOUT>
             advanced: socket read timeout in milliseconds [default: 10000]
@@ -46,7 +51,13 @@ OPTIONS:
             10000]
 
         --tor-connect-timeout <TOR_CONNECT_TIMEOUT>
-            advanced: tor connect timeout for targets in milliseconds [default: 10000]
+            advanced: tor connect timeout in milliseconds [default: 10000]
+
+        --buffer-read-size <BUFFER_READ_SIZE>
+            advanced: stream buffer read size
+
+        --buffer-write-size <BUFFER_WRITE_SIZE>
+            advanced: stream buffer write size
 
         --requests-per-conn <REQUESTS_PER_CONN>
             advanced: hint to send specific amount requests per single connection [default: 256]
@@ -56,6 +67,15 @@ OPTIONS:
 
         --so-recv-buf <SO_RECV_BUF>
             advanced: SO_RCVBUF option, see linux man for more
+
+        --disable-so-buf
+            advanced: disable so_send_buf, so_recv_buf
+
+        --disable-so-nolinger
+            advanced: disable so_linger(0)
+
+        --disable-tcp-nodelay
+            advanced: disable tcp_nodelay option
 
     -h, --help
             Print help information
