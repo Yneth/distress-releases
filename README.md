@@ -54,6 +54,27 @@ download and
 run [latest binary](https://github.com/Yneth/distress-releases/releases/latest/download/distress_x86_64-pc-windows-msvc.exe)
 
 
+### Docker
+
+```bash
+docker run --rm -it --pull always --network host ghcr.io/yneth/distress 
+```
+
+Output description
+-------------
+```
++---------------------+---------------------------------------------------------------------------------------------+
+| active_connections  | number of successfully established connections that are running flood at the current moment |
++---------------------+---------------------------------------------------------------------------------------------+
+| bps                 | bits per second                                                                             |
++---------------------+---------------------------------------------------------------------------------------------+
+| pps                 + packets per second                                                                          |
++---------------------+---------------------------------------------------------------------------------------------+
+| pending_connections | number of connections to be established for flood at the current moment                     |
++---------------------+---------------------------------------------------------------------------------------------+
+```
+
+
 Help
 -------------
 ```
@@ -65,7 +86,7 @@ USAGE:
 
 OPTIONS:
     -c, --concurrency <CONCURRENCY>
-            number of task spawners [default: 2048]
+            number of task spawners [default: 4096]
 
     -t, --targets-path <TARGETS_PATH>
             path or url to get configuration from [default: itarmy_ua]
