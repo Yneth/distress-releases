@@ -1,5 +1,4 @@
 # Distress
--------------
 
 Tool for pentesting
 -------------
