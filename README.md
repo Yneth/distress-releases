@@ -1,7 +1,5 @@
 # Distress
-
-Tool for pentesting
--------------
+pen-testing tool
 
 Features
 -------------
