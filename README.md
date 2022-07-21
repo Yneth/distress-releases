@@ -1,5 +1,5 @@
 # Distress
-==============
+-------------
 
 Tool for pentesting
 -------------
@@ -26,6 +26,11 @@ Traffic limitation
 -------------
 
 For macOS or linux refer to [wondershaper](https://github.com/magnific0/wondershaper)
+
+System optmizations
+-------------
+- [Linux TCP stack](https://linux2me.wordpress.com/2018/06/03/tuning-the-tcp-stack-system-administrator/)
+
 
 Installation
 -------------
