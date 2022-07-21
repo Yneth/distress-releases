@@ -1,3 +1,59 @@
+# Distress
+==============
+
+Tool for pentesting
+-------------
+
+Features
+-------------
+
+- automatic target updates from ITArmy UA
+- uses proxies by default
+- supports usage of tor exit nodes (refer to `use-tor` flag)
+- low cpu usage
+
+Usage tips
+-------------
+
+During testing, I've found the following configurations to give max performance in a decreasing order:
+
+1) `--use-my-ip 100` - <span style="color: red">*CAUTION!*</span> use only with VPN, can give up to 500Mbit bandwidth
+2) `--use-tor 6 --disable-pool-proxies` - will use only tor nodes for ddos
+3) `--use-tor 6` - mix of tor and proxies
+4) `` -- no params, will use proxies, may be unstable
+
+Traffic limitation
+-------------
+
+For macOS or linux refer to [wondershaper](https://github.com/magnific0/wondershaper)
+
+Installation
+-------------
+
+#### Linux
+
+```bash
+wget https://github.com/Yneth/distress-releases/releases/latest/download/distress_x86_64-unknown-linux-musl
+chmod +x distress_x86_64-unknown-linux-musl
+./distress_x86_64-unknown-linux-musl
+```
+
+#### MacOS
+
+```bash
+wget https://github.com/Yneth/distress-releases/releases/latest/download/distress_x86_64-apple-darwin
+chmod +x distress_x86_64-apple-darwin && xattr -d com.apple.quarantine distress_x86_64-apple-darwin
+./distress_x86_64-apple-darwin
+```
+
+#### Windows
+
+download and
+run [latest binary](https://github.com/Yneth/distress-releases/releases/latest/download/distress_x86_64-pc-windows-msvc.exe)
+
+
+Help
+-------------
 ```
 distress 0.3.3
 pen-testing tool
