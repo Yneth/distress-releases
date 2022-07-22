@@ -69,7 +69,7 @@ Output description
 +---------------------+---------------------------------------------------------------------------------------------+
 | bps                 | average bits per second since last log message                                              |
 +---------------------+---------------------------------------------------------------------------------------------+
-| pps                 | average packets per second since last log message                                           |
+| rps                 | average requests per second since last log message                                          |
 +---------------------+---------------------------------------------------------------------------------------------+
 | pending_connections | number of connections to be established for flood at the current moment                     |
 +---------------------+---------------------------------------------------------------------------------------------+
