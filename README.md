@@ -23,7 +23,7 @@ Traffic limitation
 -------------
 - [trickle -d 3000 -u 6000 ./distress](https://averagelinuxuser.com/limit-bandwidth-linux/#limiting-the-bandwidth-per-application-with-trickle) -- linux only
   
-  use [calculator](https://www.gbmb.org/kb-to-mbit) to convert from KB to Mbit (or refer to 3000KB/s == 24Mbit/s)
+  use [calculator](https://www.gbmb.org/kb-to-mbit) to convert from KB to Mbit (or use as quick ref 1000KB == 1MB == 8Mbit)
   
   it is nice to use download rate as a half of upload rate
   
