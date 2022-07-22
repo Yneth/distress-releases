@@ -21,8 +21,8 @@ During testing, I've found the following configurations to give max performance 
 
 Traffic limitation
 -------------
-
-For macOS or linux refer to [wondershaper](https://github.com/magnific0/wondershaper)
+- linux only [trickle](https://averagelinuxuser.com/limit-bandwidth-linux/#limiting-the-bandwidth-per-application-with-trickle)
+- For macOS or linux refer to [wondershaper](https://github.com/magnific0/wondershaper)
 
 System optmizations
 -------------
