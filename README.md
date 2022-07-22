@@ -21,13 +21,13 @@ During testing, I've found the following configurations to give max performance 
 
 Traffic limitation
 -------------
-- linux only [trickle -d 3000 -u 6000 ./distress](https://averagelinuxuser.com/limit-bandwidth-linux/#limiting-the-bandwidth-per-application-with-trickle)
+- [trickle -d 3000 -u 6000 ./distress](https://averagelinuxuser.com/limit-bandwidth-linux/#limiting-the-bandwidth-per-application-with-trickle) -- linux only
   
   use [calculator](https://www.gbmb.org/kb-to-mbit) to convert from KB to Mbit (or refer to 3000KB/s == 24Mbit/s)
   
   it is nice to use download rate as a half of upload rate
   
-- For macOS or linux refer to [wondershaper](https://github.com/magnific0/wondershaper)
+- [wondershaper](https://github.com/magnific0/wondershaper) -- macos | linux
 
 System optmizations
 -------------
