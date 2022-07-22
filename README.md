@@ -27,6 +27,7 @@ For macOS or linux refer to [wondershaper](https://github.com/magnific0/wondersh
 System optmizations
 -------------
 - [Linux TCP stack](https://linux2me.wordpress.com/2018/06/03/tuning-the-tcp-stack-system-administrator/)
+- [tuned -p network-throughput -d](https://tuned-project.org/) (taken from previous link)
 
 
 Installation
