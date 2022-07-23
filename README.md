@@ -22,11 +22,11 @@ During testing, I've found the following configurations to give max performance 
 Traffic limitation
 -------------
 - [trickle -d 3000 -u 6000 ./distress](https://averagelinuxuser.com/limit-bandwidth-linux/#limiting-the-bandwidth-per-application-with-trickle) -- linux only
-  
+
   use [calculator](https://www.gbmb.org/kb-to-mbit) to convert from KB to Mbit (or use as quick ref 1000KB == 1MB == 8Mbit)
-  
+
   it is nice to use download rate as a half of upload rate
-  
+
 - [wondershaper](https://github.com/magnific0/wondershaper) -- macos | linux
 
 System optmizations
@@ -50,7 +50,7 @@ chmod +x distress_x86_64-unknown-linux-musl
 
 ```bash
 wget https://github.com/Yneth/distress-releases/releases/latest/download/distress_x86_64-apple-darwin
-chmod +x distress_x86_64-apple-darwin && xattr -d com.apple.quarantine distress_x86_64-apple-darwin
+chmod +x distress_x86_64-apple-darwin && sudo xattr -d com.apple.quarantine distress_x86_64-apple-darwin
 ./distress_x86_64-apple-darwin
 ```
 
@@ -76,15 +76,18 @@ Output description
 +---------------------+---------------------------------------------------------------------------------------------+
 | rps                 | average requests per second since last log message                                          |
 +---------------------+---------------------------------------------------------------------------------------------+
+| pps                 | average packets per second since last log message                                           |
++---------------------+---------------------------------------------------------------------------------------------+
 | pending_connections | number of connections to be established for flood at the current moment                     |
 +---------------------+---------------------------------------------------------------------------------------------+
 ```
 
 
+
 Help
 -------------
 ```
-distress 0.3.3
+distress 0.4.0
 pen-testing tool
 
 USAGE:
@@ -102,9 +105,6 @@ OPTIONS:
 
     -q, --quiet
             Less output per occurrence
-
-        --enable-metrics
-            Enables metrics collection
 
         --use-my-ip <USE_MY_IP>
             hint to use your ip in % of requests from 0 to 100 inclusive works amazing with VPN
@@ -145,7 +145,7 @@ OPTIONS:
             advanced: stream buffer write size
 
         --requests-per-conn <REQUESTS_PER_CONN>
-            advanced: hint to send specific amount requests per single connection [default: 256]
+            advanced: hint to send specific amount requests per single connection [default: 128]
 
         --so-send-buf <SO_SEND_BUF>
             advanced: SO_SNDBUF option, see linux man for more
