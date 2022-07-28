@@ -15,8 +15,8 @@ Usage tips
 During testing, I've found the following configurations to give max performance in a decreasing order:
 
 1) `--use-my-ip 100` - <span style="color: red">*CAUTION!*</span> use only with VPN, can give up to 600Mbit bandwidth
-2) `--use-tor 6 --disable-pool-proxies` - will use only tor nodes
-3) `--use-tor 6` - mix of tor and proxies
+2) `--use-tor 6` - mix of tor and proxies
+3) `--use-tor 6 --disable-pool-proxies` - will use only tor nodes
 4) `` -- no params, will use proxies, may be unstable
 
 Traffic limitation
@@ -87,7 +87,7 @@ Output description
 Help
 -------------
 ```
-distress 0.4.0
+distress 0.4.1
 pen-testing tool
 
 USAGE:
@@ -161,6 +161,9 @@ OPTIONS:
 
         --disable-tcp-nodelay
             advanced: disable tcp_nodelay option
+
+        --prefer-native-tls
+            advanced: use nativetls implementation instead of rustls
 
     -h, --help
             Print help information
