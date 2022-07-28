@@ -87,7 +87,7 @@ Output description
 Help
 -------------
 ```
-distress 0.4.2
+distress 0.4.3
 pen-testing tool
 
 USAGE:
