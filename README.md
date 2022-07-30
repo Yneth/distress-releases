@@ -87,7 +87,7 @@ Output description
 Help
 -------------
 ```
-distress 0.4.4
+distress 0.4.5
 pen-testing tool
 
 USAGE:
@@ -106,14 +106,18 @@ OPTIONS:
     -q, --quiet
             Less output per occurrence
 
+        --disable-auto-update
+            disables automatic updates
+
+        --disable-pool-proxies
+            disables usage of mhddos proxies
+
         --use-my-ip <USE_MY_IP>
             hint to use your ip in % of requests from 0 to 100 inclusive works amazing with VPN
             [default: 0]
 
         --use-tor <USE_TOR>
-            number of tor connections per target to use, max 100 be careful with this option, as it
-            may be cpu intensive leading to freeze. on my testing machine 6 gives great results
-            [default: 0]
+            number of tor connections per target to use, max 100 [default: 0]
 
         --log-per-target
             Enables togging info for targets
