@@ -87,7 +87,7 @@ Output description
 Help
 -------------
 ```
-distress 0.4.6
+distress 0.4.7
 pen-testing tool
 
 USAGE:
@@ -124,6 +124,9 @@ OPTIONS:
 
         --log-interval-sec <LOG_INTERVAL_SEC>
             manages log frequency
+
+        --interface <INTERFACE>
+            advanced: socket interface name to use, linux only
 
         --read-timeout <READ_TIMEOUT>
             advanced: socket read timeout in milliseconds [default: 10000]
@@ -168,6 +171,10 @@ OPTIONS:
 
         --prefer-native-tls
             advanced: use nativetls implementation instead of rustls
+
+        --prefer-stats-instrumentation
+            preference for old stats counting, use this one in case current stats counting is not
+            working
 
     -h, --help
             Print help information
