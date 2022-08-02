@@ -12,6 +12,12 @@ Features
 Usage tips
 -------------
 
+> **Warning**
+> Make sure to use VPN with `--use-my-ip` option
+
+> **Warning**
+> Do not mix VPN with proxy, as it may yield poor performance
+
 During testing, I've found the following configurations to give max performance in a decreasing order:
 
 1) `--use-my-ip 100` - <span style="color: red">*CAUTION!*</span> use only with VPN, can give up to 800Mbit(whole network channel) bandwidth
