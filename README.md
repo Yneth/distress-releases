@@ -56,8 +56,8 @@ chmod +x distress_x86_64-apple-darwin && sudo xattr -d com.apple.quarantine dist
 
 #### Windows
 
-**Note**
-it is preferred to install [Linux](#linux) version via [WSL](https://docs.microsoft.com/en-us/windows/wsl/install) as it is more stable and gives better performance
+> **Note**
+> it is preferred to install [Linux](#linux) version via [WSL](https://docs.microsoft.com/en-us/windows/wsl/install) as it is more stable and gives better performance
 
 download and
 run [latest binary](https://github.com/Yneth/distress-releases/releases/latest/download/distress_x86_64-pc-windows-msvc.exe)
