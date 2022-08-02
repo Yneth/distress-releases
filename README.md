@@ -14,7 +14,7 @@ Usage tips
 
 During testing, I've found the following configurations to give max performance in a decreasing order:
 
-1) `--use-my-ip 100` - <span style="color: red">*CAUTION!*</span> use only with VPN, can give up to 600Mbit bandwidth
+1) `--use-my-ip 100` - <span style="color: red">*CAUTION!*</span> use only with VPN, can give up to 800Mbit(whole network channel) bandwidth
 2) `--use-tor 50` - mix of tor and proxies
 3) `--use-tor 50 --disable-pool-proxies` - will use only tor nodes
 4) `` -- no params, will use proxies, may be unstable
@@ -55,6 +55,9 @@ chmod +x distress_x86_64-apple-darwin && sudo xattr -d com.apple.quarantine dist
 ```
 
 #### Windows
+
+**Note**
+it is preferred to install [Linux](#linux) version via [WSL](https://docs.microsoft.com/en-us/windows/wsl/install) as it is more stable and gives better performance
 
 download and
 run [latest binary](https://github.com/Yneth/distress-releases/releases/latest/download/distress_x86_64-pc-windows-msvc.exe)
