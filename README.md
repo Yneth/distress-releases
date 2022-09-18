@@ -35,7 +35,7 @@ Traffic limitation
 
 - [wondershaper](https://github.com/magnific0/wondershaper) -- macos | linux
 
-System optmizations
+System optimizations
 -------------
 - [Linux TCP stack](https://linux2me.wordpress.com/2018/06/03/tuning-the-tcp-stack-system-administrator/)
 - [tuned -p network-throughput -d](https://tuned-project.org/) (taken from previous link)
@@ -66,7 +66,7 @@ chmod +x distress_x86_64-apple-darwin && sudo xattr -d com.apple.quarantine dist
 > it is preferred to install [Linux](#linux) version via [WSL](https://docs.microsoft.com/en-us/windows/wsl/install) as it is more stable and gives better performance
 
 download and
-run [latest binary](https://github.com/Yneth/distress-releases/releases/latest/download/distress_x86_64-pc-windows-msvc.exe)
+run [the latest binary](https://github.com/Yneth/distress-releases/releases/latest/download/distress_x86_64-pc-windows-msvc.exe)
 
 
 ### Docker
@@ -74,6 +74,12 @@ run [latest binary](https://github.com/Yneth/distress-releases/releases/latest/d
 ```bash
 docker run --rm -it --pull always --network host ghcr.io/yneth/distress 
 ```
+
+Community
+-------------
+
+If you encounter errors during distress usage, please refer to [github issues](https://github.com/Yneth/distress/issues) or [telegram community](https://t.me/distress_support)
+
 
 Output description
 -------------
@@ -96,7 +102,7 @@ Output description
 Help
 -------------
 ```
-distress 0.4.7
+distress 0.5.0
 pen-testing tool
 
 USAGE:
@@ -133,6 +139,9 @@ OPTIONS:
 
         --log-interval-sec <LOG_INTERVAL_SEC>
             manages log frequency
+
+        --user-id <USER_ID>
+            send personalized user stats to receive rewards in future
 
         --interface <INTERFACE>
             advanced: socket interface name to use, linux only
