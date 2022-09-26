@@ -102,7 +102,7 @@ Output description
 Help
 -------------
 ```
-distress 0.5.0
+distress 0.5.1
 pen-testing tool
 
 USAGE:
@@ -139,6 +139,9 @@ OPTIONS:
 
         --log-interval-sec <LOG_INTERVAL_SEC>
             manages log frequency
+
+        --json-logs
+            print logs as json
 
         --user-id <USER_ID>
             send personalized user stats to receive rewards in future
@@ -193,6 +196,9 @@ OPTIONS:
         --prefer-stats-instrumentation
             preference for old stats counting, use this one in case current stats counting is not
             working
+
+        --worker-threads <WORKER_THREADS>
+            advanced: customize worker thread count for tokio scheduler
 
     -h, --help
             Print help information
