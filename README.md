@@ -102,7 +102,7 @@ Output description
 Help
 -------------
 ```
-distress 0.5.2
+distress 0.5.3
 pen-testing tool
 
 USAGE:
