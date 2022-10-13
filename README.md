@@ -81,21 +81,13 @@ Community
 If you encounter errors during distress usage, please refer to [github issues](https://github.com/Yneth/distress/issues) or [telegram community](https://t.me/distress_support)
 
 
-Output description
--------------
-```
-+---------------------+---------------------------------------------------------------------------------------------+
-| active_connections  | number of successfully established connections that are running flood at the current moment |
-+---------------------+---------------------------------------------------------------------------------------------+
-| bps                 | average bits per second since last log message                                              |
-+---------------------+---------------------------------------------------------------------------------------------+
-| rps                 | average requests per second since last log message                                          |
-+---------------------+---------------------------------------------------------------------------------------------+
-| pps                 | average packets per second since last log message                                           |
-+---------------------+---------------------------------------------------------------------------------------------+
-| pending_connections | number of connections to be established for flood at the current moment                     |
-+---------------------+---------------------------------------------------------------------------------------------+
-```
+| Output              | Description
+| --- | --- |
+| `active_connections`  | Number of successfully established connections that are running flood at the current moment |
+| `bps`                 | Average bits per second since last log message                                              |
+| `rps`                 | Average requests per second since last log message                                          |
+| `pps`                 | Average packets per second since last log message                                           |
+| `pending_connections` | Number of connections to be established for flood at the current moment                     |
 
 
 
