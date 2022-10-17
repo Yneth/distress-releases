@@ -8,6 +8,7 @@ Features
 - uses proxies by default
 - supports usage of tor exit nodes (refer to `use-tor` flag)
 - low cpu utilization
+- advanced attacks
 
 Usage tips
 -------------
@@ -81,8 +82,10 @@ Community
 If you encounter errors during distress usage, please refer to [github issues](https://github.com/Yneth/distress/issues) or [telegram community](https://t.me/distress_support)
 
 
-| Output              | Description
-| --- | --- |
+Output description
+-------------
+| Field                 | Description
+|-----------------------| --- |
 | `active_connections`  | Number of successfully established connections that are running flood at the current moment |
 | `bps`                 | Average bits per second since last log message                                              |
 | `rps`                 | Average requests per second since last log message                                          |
@@ -90,111 +93,74 @@ If you encounter errors during distress usage, please refer to [github issues](h
 | `pending_connections` | Number of connections to be established for flood at the current moment                     |
 
 
-
 Help
 -------------
 ```
-distress 0.5.3
 pen-testing tool
 
-USAGE:
-    distress [OPTIONS]
+Usage: distress [OPTIONS]
 
-OPTIONS:
-    -c, --concurrency <CONCURRENCY>
-            number of task spawners [default: 4096]
-
-    -t, --targets-path <TARGETS_PATH>
-            path or url to get configuration from [default: itarmy_ua]
-
-    -v, --verbose
-            More output per occurrence
-
-    -q, --quiet
-            Less output per occurrence
-
-        --disable-auto-update
-            disables automatic updates
-
-        --disable-pool-proxies
-            disables usage of mhddos proxies
-
-        --use-my-ip <USE_MY_IP>
-            hint to use your ip in % of requests from 0 to 100 inclusive works amazing with VPN
-            [default: 0]
-
-        --use-tor <USE_TOR>
-            number of tor connections per target to use, max 100 [default: 0]
-
-        --log-per-target
-            Enables togging info for targets
-
-        --log-interval-sec <LOG_INTERVAL_SEC>
-            manages log frequency
-
-        --json-logs
-            print logs as json
-
-        --user-id <USER_ID>
-            send personalized user stats to receive rewards in future
-
-        --interface <INTERFACE>
-            advanced: socket interface name to use, linux only
-
-        --read-timeout <READ_TIMEOUT>
-            advanced: socket read timeout in milliseconds [default: 10000]
-
-        --tls-connect-timeout <TLS_CONNECT_TIMEOUT>
-            advanced: tls handshake timeout in milliseconds [default: 10000]
-
-        --connect-timeout <CONNECT_TIMEOUT>
-            advanced: socket connect timeout for targets and proxies in milliseconds [default:
-            10000]
-
-        --proxy-connect-timeout <PROXY_CONNECT_TIMEOUT>
-            advanced: socket proxy connect timeout for targets and proxies in milliseconds [default:
-            10000]
-
-        --tor-connect-timeout <TOR_CONNECT_TIMEOUT>
-            advanced: tor connect timeout in milliseconds [default: 10000]
-
-        --buffer-read-size <BUFFER_READ_SIZE>
-            advanced: stream buffer read size
-
-        --buffer-write-size <BUFFER_WRITE_SIZE>
-            advanced: stream buffer write size
-
-        --requests-per-conn <REQUESTS_PER_CONN>
-            advanced: hint to send specific amount requests per single connection [default: 128]
-
-        --so-send-buf <SO_SEND_BUF>
-            advanced: SO_SNDBUF option, see linux man for more
-
-        --so-recv-buf <SO_RECV_BUF>
-            advanced: SO_RCVBUF option, see linux man for more
-
-        --disable-so-buf
-            advanced: disable so_send_buf, so_recv_buf
-
-        --disable-so-nolinger
-            advanced: disable so_linger(0)
-
-        --disable-tcp-nodelay
-            advanced: disable tcp_nodelay option
-
-        --prefer-native-tls
-            advanced: use nativetls implementation instead of rustls
-
-        --prefer-stats-instrumentation
-            preference for old stats counting, use this one in case current stats counting is not
-            working
-
-        --worker-threads <WORKER_THREADS>
-            advanced: customize worker thread count for tokio scheduler
-
-    -h, --help
-            Print help information
-
-    -V, --version
-            Print version information
+Options:
+  -c, --concurrency <CONCURRENCY>
+          number of task spawners [default: 4096]
+  -t, --targets-path <TARGETS_PATH>
+          path or url to get configuration from [default: itarmy_ua]
+  -v, --verbose...
+          More output per occurrence
+  -q, --quiet...
+          Less output per occurrence
+      --disable-auto-update
+          disables automatic updates
+      --disable-pool-proxies
+          disables usage of mhddos proxies
+      --use-my-ip <USE_MY_IP>
+          hint to use your ip in % of requests from 0 to 100 inclusive works amazing with VPN [default: 0]
+      --use-tor <USE_TOR>
+          number of tor connections per target to use, max 100 [default: 0]
+      --log-per-target
+          Enables togging info for targets
+      --log-interval-sec <LOG_INTERVAL_SEC>
+          manages log frequency
+      --json-logs
+          print logs as json
+      --user-id <USER_ID>
+          send personalized user stats to receive rewards in future
+      --interface <INTERFACE>
+          advanced: socket interface name to use, linux only
+      --read-timeout <READ_TIMEOUT>
+          advanced: socket read timeout in milliseconds [default: 10000]
+      --tls-connect-timeout <TLS_CONNECT_TIMEOUT>
+          advanced: tls handshake timeout in milliseconds [default: 10000]
+      --connect-timeout <CONNECT_TIMEOUT>
+          advanced: socket connect timeout for targets and proxies in milliseconds [default: 10000]
+      --proxy-connect-timeout <PROXY_CONNECT_TIMEOUT>
+          advanced: socket proxy connect timeout for targets and proxies in milliseconds [default: 10000]
+      --tor-connect-timeout <TOR_CONNECT_TIMEOUT>
+          advanced: tor connect timeout in milliseconds [default: 10000]
+      --buffer-read-size <BUFFER_READ_SIZE>
+          advanced: stream buffer read size
+      --buffer-write-size <BUFFER_WRITE_SIZE>
+          advanced: stream buffer write size
+      --requests-per-conn <REQUESTS_PER_CONN>
+          advanced: hint to send specific amount requests per single connection [default: 128]
+      --so-send-buf <SO_SEND_BUF>
+          advanced: SO_SNDBUF option, see linux man for more
+      --so-recv-buf <SO_RECV_BUF>
+          advanced: SO_RCVBUF option, see linux man for more
+      --disable-so-buf
+          advanced: disable so_send_buf, so_recv_buf
+      --disable-so-nolinger
+          advanced: disable so_linger(0)
+      --disable-tcp-nodelay
+          advanced: disable tcp_nodelay option
+      --prefer-native-tls
+          advanced: use nativetls implementation instead of rustls
+      --prefer-stats-instrumentation
+          preference for old stats counting, use this one in case current stats counting is not working
+      --worker-threads <WORKER_THREADS>
+          advanced: customize worker thread count for tokio scheduler
+  -h, --help
+          Print help information
+  -V, --version
+          Print version information
 ```
