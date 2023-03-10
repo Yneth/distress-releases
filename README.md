@@ -5,10 +5,10 @@ Features
 -------------
 
 - automatic target updates from ITArmy UA
-- uses proxies by default
 - supports usage of tor exit nodes (refer to `use-tor` flag)
 - low cpu utilization
 - advanced attacks
+*- proxy support is not available anymore*
 
 Usage tips
 -------------
