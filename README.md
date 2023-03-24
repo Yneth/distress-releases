@@ -98,7 +98,10 @@ Help
 ```
 pen-testing tool
 
-Usage: distress [OPTIONS]
+Usage: distress [OPTIONS] [TOR_DIR_ID]
+
+Arguments:
+  [TOR_DIR_ID]  advanced: tor directory identifier
 
 Options:
   -c, --concurrency <CONCURRENCY>
@@ -116,7 +119,7 @@ Options:
       --use-my-ip <USE_MY_IP>
           hint to use your ip in % of requests from 0 to 100 inclusive works amazing with VPN [default: 0]
       --use-tor <USE_TOR>
-          number of tor connections per target to use, max 100 [default: 0]
+          number of tor connections per target to use, max 100 [default: 10]
       --log-per-target
           Enables togging info for targets
       --log-interval-sec <LOG_INTERVAL_SEC>
