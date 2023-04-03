@@ -26,7 +26,7 @@ Usage tips
 During testing, I've found the following configurations to give max performance in a decreasing order:
 
 1) `--use-my-ip 100` - can give up to 800Mbit bandwidth (whole network channel)
-2) `` -- no params, will use proxies, may be unstable
+2) `` -- no params, will use proxies
 3) `--use-tor 50` - mix of tor and proxies
 
 Traffic limitation
