@@ -51,6 +51,10 @@ System optimizations
 Installation
 -------------
 
+#### x100
+
+Distress is integrated in x100 tool, you can read the full documentation on how to set up and run [here](https://x100.vn.ua/docs/).
+
 #### Linux
 
 ```bash
@@ -82,10 +86,6 @@ chmod +x distress_x86_64-apple-darwin && sudo xattr -d com.apple.quarantine dist
 
 download and
 run [the latest binary](https://github.com/Yneth/distress-releases/releases/latest/download/distress_x86_64-pc-windows-msvc.exe)
-
-#### x100
-
-Distress is integrated in x100 tool, you can read the full documentation on how to set up and run [here](https://x100.vn.ua/docs/).
 
 #### Docker
 
