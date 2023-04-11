@@ -25,7 +25,7 @@ Usage tips
 
 During testing, I've found the following configurations to give max performance in a decreasing order:
 
-1) `--use-my-ip 100` or [x100](#x100)
+1) `--use-my-ip 100` or [using x100 tool](#x100)
 2) `` -- no params, proxy mode
 3) `--use-tor 50` - mix of tor and proxies
 
