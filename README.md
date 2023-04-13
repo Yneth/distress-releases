@@ -53,6 +53,9 @@ Installation
 
 #### x100
 
+> **Note**
+> X100+Distress is best to use on VPS servers, as it reduces significantly the probability of a ban.
+
 Distress is integrated in x100 tool, you can read the full documentation on how to set up and run [here](https://x100.vn.ua/docs/).
 
 #### Linux
