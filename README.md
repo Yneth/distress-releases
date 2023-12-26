@@ -25,7 +25,7 @@ Usage tips
 
 During testing, I've found the following configurations to give max performance in a decreasing order:
 
-1) `--use-my-ip 100` - can give up to 800Mbit bandwidth (whole network channel)
+1) `--use-my-ip 100` - or [using x100 tool](#x100)
 2) `` -- no params, proxy mode
 3) `--use-tor 50` - mix of tor and proxies
 
@@ -50,6 +50,13 @@ System optimizations
 
 Installation
 -------------
+
+#### x100
+
+> **Note**
+> X100+Distress is best to use on VPS servers, as it reduces significantly the probability of a ban.
+
+Distress is integrated in x100 tool, you can read the full documentation on how to set up and run [here](https://x100.vn.ua/docs/).
 
 #### Linux
 
@@ -83,7 +90,7 @@ chmod +x distress_x86_64-apple-darwin && sudo xattr -d com.apple.quarantine dist
 download and
 run [the latest binary](https://github.com/Yneth/distress-releases/releases/latest/download/distress_x86_64-pc-windows-msvc.exe)
 
-### Docker
+#### Docker
 
 ```bash
 docker run --rm -it --pull always --network host ghcr.io/yneth/distress 
