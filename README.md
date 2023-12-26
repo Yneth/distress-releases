@@ -25,7 +25,7 @@ Usage tips
 
 During testing, I've found the following configurations to give max performance in a decreasing order:
 
-1) `--use-my-ip 100` or [using x100 tool](#x100)
+1) `--use-my-ip 100` - can give up to 800Mbit bandwidth (whole network channel)
 2) `` -- no params, proxy mode
 3) `--use-tor 50` - mix of tor and proxies
 
@@ -50,13 +50,6 @@ System optimizations
 
 Installation
 -------------
-
-#### x100
-
-> **Note**
-> X100+Distress is best to use on VPS servers, as it reduces significantly the probability of a ban.
-
-Distress is integrated in x100 tool, you can read the full documentation on how to set up and run [here](https://x100.vn.ua/docs/).
 
 #### Linux
 
@@ -90,7 +83,7 @@ chmod +x distress_x86_64-apple-darwin && sudo xattr -d com.apple.quarantine dist
 download and
 run [the latest binary](https://github.com/Yneth/distress-releases/releases/latest/download/distress_x86_64-pc-windows-msvc.exe)
 
-#### Docker
+### Docker
 
 ```bash
 docker run --rm -it --pull always --network host ghcr.io/yneth/distress 
@@ -126,13 +119,11 @@ Options:
   -t, --targets-path <TARGETS_PATH>
           path or url to get configuration from [default: itarmy_ua]
   -v, --verbose...
-          More output per occurrence
+          Increase logging verbosity
   -q, --quiet...
-          Less output per occurrence
+          Decrease logging verbosity
       --disable-auto-update
           disables automatic updates
-      --disable-pool-proxies
-          disables usage of mhddos proxies
       --use-my-ip <USE_MY_IP>
           hint to use your ip in % of requests from 0 to 100 inclusive works amazing with VPN [default: 0]
       --use-tor <USE_TOR>
@@ -145,6 +136,8 @@ Options:
           print logs as json
       --user-id <USER_ID>
           send personalized user stats to receive rewards in future
+      --source <SOURCE>
+          send run source info
       --interface <INTERFACE>
           advanced: socket interface name to use, linux only
       --read-timeout <READ_TIMEOUT>
@@ -179,6 +172,8 @@ Options:
           advanced: disable tcp_nodelay option
       --disable-packet-flood
           advanced: disable packet flood
+      --direct-udp-mixed-flood
+          
       --prefer-native-tls
           advanced: use nativetls implementation instead of rustls
       --worker-threads <WORKER_THREADS>
