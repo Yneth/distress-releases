@@ -1,9 +1,12 @@
 name: version
 
 on:
-  push:
-    tags:
-      - '*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'tag version of the latest release'
+        required: true
+        type: string
 
 jobs:
   write-version:
@@ -15,4 +18,4 @@ jobs:
       uses: brettdorrans/write-version-to-file@master
       with:
         filename: './version.txt'
-        placeholder: '${VERSION}'
+        placeholder: ${{inputs.VERSION}}
