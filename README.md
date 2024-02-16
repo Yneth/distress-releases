@@ -2,61 +2,61 @@
 
 pen-testing tool
 
-Features
--------------
+## Features
 
-- by default uses proxies of all possible countries
-- built-in support of tor exit nodes (refer to the `use-tor` flag)
+- uses proxies of all possible countries by default
+- built-in support for tor exit nodes (refer to `--use-tor` flag)
 - low CPU usage
 - supports a large number of platforms
-- automatic target updates from ITArmy UA
+- automatic update of targets from ITArmy UA
+- advanced methods of flooding
 
-Usage tips
--------------
+## Table of Contents
+
+* **[Usage tips](#usage-tips)**<br>
+* **[System optimizations](#system-optimizations)**<br>
+* **[Installation](#installation)**<br>
+    * **[x100](#x100)**<br>
+    * **[linux](#linux)**<br>
+    * **[macos](#macos)**<br>
+    * **[windows](#windows)**<br>
+    * **[docker](#docker)**<br>
+* **[Community](#community)**<br>
+* **[Output Description](#output-description)**<br>
+* **[Help](#help)**<br>
+
+
+## Usage tips
 
 > **Warning**
-> Make sure to use VPN with `--use-my-ip` option
+> Be sure to use a VPN with the `--use-my-ip` option
 
 > **Warning**
-> Do not mix VPN with proxy, as it may yield poor performance
- 
+> Don't mix VPN with proxy as it can lead to poor performance
+
 > **Warning**
-> To make it run in background use `screen` or `tmux` utilities
+> To make it run in the background, use the `screen` or `tmux` utilities
 
-During testing, I've found the following configurations to give max performance in a decreasing order:
+> **Warning**
+> To run some advanced methods, you need to run the tool as an administrator
 
-1) `--use-my-ip 100` - or [using x100 tool](#x100)
-2) `` -- no params, proxy mode
-3) `--use-tor 50` - mix of tor and proxies
+## System optimizations
 
-Traffic limitation
--------------
-
-- [trickle -d 3000 -u 6000 ./distress](https://averagelinuxuser.com/limit-bandwidth-linux/#limiting-the-bandwidth-per-application-with-trickle) --
-  linux only
-
-  use [calculator](https://www.gbmb.org/kb-to-mbit) to convert from KB to Mbit (or use as quick ref 1000KB == 1MB ==
-  8Mbit)
-
-  it is nice to use download rate as a half of upload rate
-
-- [wondershaper](https://github.com/magnific0/wondershaper) -- macos | linux
-
-System optimizations
--------------
+> **Warning**
+> Advanced users only
 
 - [Linux TCP stack](https://linux2me.wordpress.com/2018/06/03/tuning-the-tcp-stack-system-administrator/)
 - [tuned -p network-throughput -d](https://tuned-project.org/) (taken from previous link)
 
-Installation
--------------
+## Installation
 
 #### x100
 
 > **Note**
-> X100+Distress is best to use on VPS servers, as it reduces significantly the probability of a ban.
+> X100+Distress is best used on VPS servers as it greatly reduces the chance of a ban.
 
-Distress is integrated in x100 tool, you can read the full documentation on how to set up and run [here](https://x100.vn.ua/docs/).
+Distress is integrated into the x100 tool, you can read the full documentation on setting up and
+run [here](https://x100.vn.ua/docs/).
 
 #### Linux
 
@@ -67,6 +67,7 @@ chmod +x distress_x86_64-unknown-linux-musl
 ```
 
 ##### with screen
+
 ```bash
 wget https://github.com/Yneth/distress-releases/releases/latest/download/distress_x86_64-unknown-linux-musl
 chmod +x distress_x86_64-unknown-linux-musl
@@ -84,11 +85,10 @@ chmod +x distress_x86_64-apple-darwin && sudo xattr -d com.apple.quarantine dist
 #### Windows
 
 > **Note**
-> it is preferred to install [Linux](#linux) version via [WSL](https://docs.microsoft.com/en-us/windows/wsl/install) as
-> it is more stable and gives better performance
+> preferably install the [Linux](#linux) version via [WSL](https://docs.microsoft.com/en-us/windows/wsl/install) as
+> it is more stable and provides better performance
 
-download and
-run [the latest binary](https://github.com/Yneth/distress-releases/releases/latest/download/distress_x86_64-pc-windows-msvc.exe)
+download and run [the latest binary](https://github.com/Yneth/distress-releases/releases/latest/download/distress_x86_64-pc-windows-msvc.exe)
 
 #### Docker
 
@@ -96,45 +96,46 @@ run [the latest binary](https://github.com/Yneth/distress-releases/releases/late
 docker run --rm -it --pull always --network host ghcr.io/yneth/distress 
 ```
 
-Community
--------------
+## Community
 
-If you encounter errors during distress usage, please refer to [github issues](https://github.com/Yneth/distress/issues)
+If you encounter errors while using `distress`, please refer
+to [github issues](https://github.com/Yneth/distress/issues)
 or [telegram community](https://t.me/distress_support)
 
-Output Description
--------------
+## Output Description
 
-| Column                | Description                                                                                 
-|-----------------------|---------------------------------------------------------------------------------------------|
-| `active_connections`  | Number of successfully established connections that are running flood at the current moment |
-| `bps`                 | Average bits per second since last log message                                              |
-| `rps`                 | Average requests per second since last log message                                          |
-| `pps`                 | Average packets per second since last log message                                           |
-| `pending_connections` | Number of connections to be established for flood at the current moment                     |
+| Column                | Description                                                                                         
+|-----------------------|-----------------------------------------------------------------------------------------------------|
+| `active_connections`  | The number of successfully established connections performed by flood at the current moment         |
+| `bps`                 | The average number of bits per second since the last log message read from the network interface    |
+| `pps`                 | The average number of packets per second since the last log message read from the network interface |
+| `requests`            | Queries made by the tool since the last log message were manually counted                           |
+| `bytes`               | Bytes sent by the tool since the last log message are manually counted                              |
+| `pending_connections` | The number of connections in pending state                                                          |
 
-Help
--------------
+## Help
+
+``` ./distress -h```
 ```
 pen-testing tool
 
 Usage: distress [OPTIONS]
 
 Options:
-  -c, --concurrency <CONCURRENCY>
-          number of task spawners [default: 4096]
-  -t, --targets-path <TARGETS_PATH>
-          path or url to get configuration from [default: itarmy_ua]
   -v, --verbose...
           Increase logging verbosity
   -q, --quiet...
           Decrease logging verbosity
-      --disable-auto-update
-          disables automatic updates
+  -t, --targets-path <TARGETS_PATH>
+          path or url to get configuration from [default: itarmy_ua]
+  -c, --concurrency <CONCURRENCY>
+          number of task spawners [default: 4096]
       --use-my-ip <USE_MY_IP>
           hint to use your ip in % of requests from 0 to 100 inclusive works amazing with VPN [default: 0]
       --use-tor <USE_TOR>
           number of tor connections per target to use, max 100
+      --disable-auto-update
+          disables automatic updates
       --log-per-target
           Enables togging info for targets
       --log-interval-sec <LOG_INTERVAL_SEC>
@@ -143,10 +144,8 @@ Options:
           print logs as json
       --user-id <USER_ID>
           send personalized user stats to receive rewards in future
-      --source <SOURCE>
-          send run source info
       --interface <INTERFACE>
-          advanced: socket interface name to use, linux only
+          advanced: socket interface name to use
       --read-timeout <READ_TIMEOUT>
           advanced: socket read timeout in milliseconds [default: 10000]
       --tls-connect-timeout <TLS_CONNECT_TIMEOUT>
@@ -162,31 +161,25 @@ Options:
       --h2-ready-send-timeout <H2_READY_SEND_TIMEOUT>
           advanced: h2 handshake timeout in milliseconds [default: 10000]
       --buffer-read-size <BUFFER_READ_SIZE>
-          advanced: stream buffer read size
+          advanced: application stream buffer read size
       --buffer-write-size <BUFFER_WRITE_SIZE>
-          advanced: stream buffer write size
+          advanced: application stream buffer write size
       --requests-per-conn <REQUESTS_PER_CONN>
           advanced: hint to send specific amount requests per single connection [default: 128]
       --so-send-buf <SO_SEND_BUF>
-          advanced: SO_SNDBUF option, see linux man for more
+          advanced: socket SO_SNDBUF option, see linux man for more
       --so-recv-buf <SO_RECV_BUF>
-          advanced: SO_RCVBUF option, see linux man for more
+          advanced: socket SO_RCVBUF option, see linux man for more
       --disable-so-buf
           advanced: disable so_send_buf, so_recv_buf
       --disable-so-nolinger
           advanced: disable so_linger(0)
       --disable-tcp-nodelay
           advanced: disable tcp_nodelay option
-      --disable-packet-flood
-          advanced: disable packet flood
-      --direct-udp-mixed-flood
-          
-      --prefer-native-tls
-          advanced: use nativetls implementation instead of rustls
       --worker-threads <WORKER_THREADS>
           advanced: customize worker thread count for tokio scheduler
   -h, --help
-          Print help
+          Print help information (use `--help` for more detail)
   -V, --version
-          Print version
+          Print version information
 ```
