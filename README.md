@@ -92,6 +92,9 @@ download and run [the latest binary](https://github.com/Yneth/distress-releases/
 
 #### Docker
 
+> **Warning**
+> Docker does not support auto updates
+
 ```bash
 docker run --rm -it --pull always --network host ghcr.io/yneth/distress 
 ```
