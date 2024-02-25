@@ -11,4 +11,4 @@ RUN \
   wget https://github.com/Yneth/distress-releases/releases/download/${version}/${asset_name} -O /usr/local/bin/distress && \
   chmod +x /usr/local/bin/distress
 
-ENTRYPOINT [ "/usr/local/bin/distress" ]
+ENTRYPOINT [ "/usr/local/bin/distress", "--disable-auto-update" ]
