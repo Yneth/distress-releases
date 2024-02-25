@@ -99,7 +99,7 @@ docker run --rm -it --pull always --network host ghcr.io/yneth/distress
 ## Community
 
 If you encounter errors while using `distress`, please refer
-to [github issues](https://github.com/Yneth/distress/issues)
+to [github issues](https://github.com/Yneth/distress-releases/issues)
 or [telegram community](https://t.me/distress_support)
 
 ## Output Description
@@ -109,8 +109,8 @@ or [telegram community](https://t.me/distress_support)
 | `active_connections`  | The number of successfully established connections performed by flood at the current moment         |
 | `bps`                 | The average number of bits per second since the last log message read from the network interface    |
 | `pps`                 | The average number of packets per second since the last log message read from the network interface |
-| `requests`            | Queries made by the tool since the last log message were manually counted                           |
-| `bytes`               | Bytes sent by the tool since the last log message are manually counted                              |
+| `requests`            | Queries made by the tool since the last log message                           |
+| `bytes`               | Bytes sent by the tool since the last log message                              |
 | `pending_connections` | The number of connections in pending state                                                          |
 
 ## Help
