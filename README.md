@@ -95,6 +95,7 @@ download and run [the latest binary](https://github.com/Yneth/distress-releases/
 > **Warning**
 > Docker does not support auto updates
 
+
 ```bash
 docker run --rm -it --pull always --network host ghcr.io/yneth/distress 
 ```
@@ -132,7 +133,7 @@ Options:
   -t, --targets-path <TARGETS_PATH>
           path or url to get configuration from [default: itarmy_ua]
   -c, --concurrency <CONCURRENCY>
-          number of task spawners [default: 4096]
+          number of tasks
       --use-my-ip <USE_MY_IP>
           hint to use your ip in % of requests from 0 to 100 inclusive works amazing with VPN [default: 0]
       --use-tor <USE_TOR>
@@ -148,7 +149,7 @@ Options:
       --user-id <USER_ID>
           send personalized user stats to receive rewards in future
       --interface <INTERFACE>
-          advanced: socket interface name to use
+          advanced: comma separated socket interface names to use example: --interface eth0,lo0
       --read-timeout <READ_TIMEOUT>
           advanced: socket read timeout in milliseconds [default: 10000]
       --tls-connect-timeout <TLS_CONNECT_TIMEOUT>
