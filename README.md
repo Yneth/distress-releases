@@ -91,7 +91,6 @@ chmod +x distress_x86_64-apple-darwin && sudo xattr -d com.apple.quarantine dist
 download and run [the latest binary](https://github.com/Yneth/distress-releases/releases/latest/download/distress_x86_64-pc-windows-msvc.exe)
 
 #### Docker
-
 > **Warning**
 > Docker does not support auto updates
 
