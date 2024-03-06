@@ -120,7 +120,7 @@ or [telegram community](https://t.me/distress_support)
 
 ``` ./distress -h```
 ```
-pen-testing tool
+load-testing tool
 
 Usage: distress [OPTIONS]
 
