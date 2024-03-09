@@ -1,6 +1,6 @@
 # Distress
 
-pen-testing tool
+load-testing tool
 
 ## Features
 
