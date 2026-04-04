@@ -45,9 +45,6 @@ https://github.com/porthole-ascend-cinnamon/targets_audit
 Дякуємо за довіру. Слава Україні!
 
 
-## ITAU ALERT ! UPD 
-
-
 ## Features
 
 - uses proxies of all possible countries by default
